@@ -1,0 +1,22 @@
+import Hospitales.*
+test "si el hospital no tiene doctores da desconfianza" {
+
+	assert.that(hospital.dasDesconfianza())
+
+}
+test "si el hospital no tiene doctores su calidad es 0" {
+
+	hospital.doctores([])
+	assert.equals(hospital.calidad(),0)
+
+}
+test "si un doctor cura a un enfermo, su vida vuelve a 100" {
+	sandra.vida(10)
+	lucho.cura(sandra)
+	assert.equals(sandra.vida(), 100)
+}
+test "si el hospital cura a un enfermo, su vida vuelve a 100" {
+	sandra.vida(10)
+	hospital.cura(sandra)
+	assert.equals(sandra.vida(), 100)
+}
