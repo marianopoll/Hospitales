@@ -11,8 +11,8 @@ object hospital {
 	method doctores(nuevosdoctores){
 		doctores = nuevosdoctores
 	}
-	method pacientes() = pacientesatendidos
-	method pacientes(nuevospacientesatendidos){
+	method pacientesatendidos() = pacientesatendidos
+	method pacientesatendidos(nuevospacientesatendidos){
 		pacientesatendidos = nuevospacientesatendidos
 	}
 	method calidad() = self.doctores().sum({doctor=>doctor.calidad()})
